@@ -11,11 +11,13 @@ Available Operators:
 ## Scale and Tris to Quad
 
 Before running operator: Be in obj mode, click any obj, press a to select all objects
+
 Result: scales 4x and performs tri to quad
  
 ## Split Tile All
 
 Before running operator: make sure all objects are scaled properly (1 tile = 1 meter), be in obj mode
+
 Result: attempts to convert every polygon into 1x1 squares 
  
 
