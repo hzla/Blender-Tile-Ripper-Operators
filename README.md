@@ -12,7 +12,7 @@ Available Operators:
 
 Before running operator: Be in obj mode, click any obj, press a to select all objects
 
-Result: scales 4x and performs tri to quad
+Result: scales 4x and performs tri to quad, scale is customizable with a dialog box after running
  
 ## Split Tile All
 
