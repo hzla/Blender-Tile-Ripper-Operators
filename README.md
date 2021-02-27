@@ -1,6 +1,8 @@
 # Blender-Tile-Ripper-Operators
 Blender addon to help rip tiles
 
+[Partial Demo Video](https://streamable.com/g7cpjx)
+
 Available Operators:
 
 
