@@ -104,9 +104,9 @@ class ObjectTileAll(bpy.types.Operator):
 
 class ObjectScale(bpy.types.Operator):
     bl_idname = "object.scale" 
-    bl_label = "Scale and Tris to Quad"  
+    bl_label = "Scales and Tris to Quad"  
     bl_options = {'REGISTER', 'UNDO'} 
-    scale = bpy.props.IntProperty(name="Scale", default=4, min=0, max=1000000)
+    scale = bpy.props.FloatProperty(name="Scale", default=4, min=0, max=1000000)
     def execute(self, context):    
 
         bpy.ops.object.editmode_toggle()
