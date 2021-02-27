@@ -1,5 +1,6 @@
 # Blender-Tile-Ripper-Operators
 Blender addon to help rip tiles
+Install Instruction: Open Blender -> F4 -> Preferences -> Addons Tab -> Install -> Select Python File
 
 [Partial Demo Video](https://streamable.com/g7cpjx)
 
