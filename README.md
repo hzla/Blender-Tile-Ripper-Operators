@@ -53,9 +53,9 @@ Result: moves object to center based on selected vertex
 
 ## Export Selected Faces
 
-Before running operator: edit mode,then select all faces you want to include in obj
+Before running operator: be in edit mode,then select all faces you want to include in obj
 
-Result: detatches selected obj, combines into new obj, autocenters and then exports
+Result: detatches selected faces, combines faces into new obj, autocenters and then exports
 
 Notes: Must name file after running operator to finish exporting
 
