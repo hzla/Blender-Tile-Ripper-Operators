@@ -26,6 +26,8 @@ Result: scales 4x and performs tri to quad, scale is customizable with a dialog 
 Before running operator: make sure all objects are scaled properly (1 tile = 1 meter), be in obj mode
 
 Result: attempts to convert every polygon into 1x1 squares 
+
+Notes: sometimes, you can get cleaner cuts by running limited dissolve on all objects before using this command.
  
 
 ## Split Tile Single Object
