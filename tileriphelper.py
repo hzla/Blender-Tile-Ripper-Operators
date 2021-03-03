@@ -88,7 +88,7 @@ class ObjectTileAll(bpy.types.Operator):
                 length_is_dividable_integer = (length > 1) and ((length % 1 <= 0.05) or (length % 1 >= 0.95)) 
                 if length_is_dividable_integer: 
                     #loop cut every edge with integer length over 1 into 1 unit sections
-                    num_cuts = length - 1
+                    num_cuts = round(length, 0) - 1
                     bpy.ops.mesh.loopcut_slide(override, MESH_OT_loopcut={"number_cuts":num_cuts, "smoothness":0, "falloff":'INVERSE_SQUARE', "object_index":0, "edge_index":edge_index, "mesh_select_mode_init":(True, False, False)}, TRANSFORM_OT_edge_slide={"value":0, "single_side":False, "use_even":False, "flipped":False, "use_clamp":True, "mirror":True, "snap":False, "snap_target":'CLOSEST', "snap_point":(0, 0, 0), "snap_align":False, "snap_normal":(0, 0, 0), "correct_uv":True, "release_confirm":False, "use_accurate":False})
                     bpy.ops.mesh.select_all(action='SELECT')
                     mesh_data.edges.ensure_lookup_table() 
@@ -104,9 +104,9 @@ class ObjectTileAll(bpy.types.Operator):
 
 class ObjectScale(bpy.types.Operator):
     bl_idname = "object.scale" 
-    bl_label = "Scales and Tris to Quad"  
+    bl_label = "Scale and Tris to Quad"  
     bl_options = {'REGISTER', 'UNDO'} 
-    scale = bpy.props.FloatProperty(name="Scale", default=4, min=0, max=1000000)
+    scale = bpy.props.IntProperty(name="Scale", default=4, min=0, max=1000000)
     def execute(self, context):    
 
         bpy.ops.object.editmode_toggle()
@@ -177,7 +177,7 @@ class ObjectTile(bpy.types.Operator):
             rounded_length = str(round(length, 2))
             length_is_dividable_integer = (length > 1) and ((length % 1 <= 0.05) or (length % 1 >= 0.95))
             if length_is_dividable_integer:
-                num_cuts = length - 1
+                num_cuts = round(length, 0) - 1
                 bpy.ops.mesh.loopcut_slide(override, MESH_OT_loopcut={"number_cuts":num_cuts, "smoothness":0, "falloff":'INVERSE_SQUARE', "object_index":0, "edge_index":edge_index, "mesh_select_mode_init":(True, False, False)}, TRANSFORM_OT_edge_slide={"value":0, "single_side":False, "use_even":False, "flipped":False, "use_clamp":True, "mirror":True, "snap":False, "snap_target":'CLOSEST', "snap_point":(0, 0, 0), "snap_align":False, "snap_normal":(0, 0, 0), "correct_uv":True, "release_confirm":False, "use_accurate":False})
                 bpy.ops.mesh.select_all(action='SELECT')
                 mesh_data.edges.ensure_lookup_table()
